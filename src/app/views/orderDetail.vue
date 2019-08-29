@@ -54,6 +54,7 @@
 			return {
 				list:[],
 				a:{},
+				a:{}
 			}
 		},
 		methods: {
