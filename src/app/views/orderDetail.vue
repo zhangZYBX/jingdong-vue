@@ -10,7 +10,7 @@
 				<li :data-id='item.id' v-for="item in list" :key='item.id' v-if='item.pay.data[0] === 0'>
 					<div class='header'>
 						<span class='logo'></span><span class='jingdong'>京东</span>
-						<span class='delete'></span>
+						<span class='delete' @click="remove(item.id)"></span>
 					</div>
 					<span>订单编号: {{item.id}}</span>
 					<div>订单时间: {{item.shoppingTime}}</div>
@@ -25,7 +25,7 @@
 				<li  :data-id='item.id' v-for="item in list" :key='item.id' v-if='item.pay.data[0] === 1'>
 						<div class='header'>
 							<span class='logo'></span><span class='jingdong'>京东</span>
-							<span class='delete'></span>
+							<span class='delete' @click="remove(item.id)"></span>
 						</div>
 						<span>订单编号: {{item.id}}</span>
 						<div>订单时间: {{ item.shoppingTime }}</div>
@@ -52,7 +52,8 @@
 	export default {
 		data() {
 			return {
-				list:[]
+				list:[],
+				a:{},
 			}
 		},
 		methods: {
@@ -65,21 +66,21 @@
 						this.list = data[0]
 					})
 			},
-//			remove(id) {
-//                                if(!confirm("删除订单？")) return;
-//                                else{
-//				        this.$http({
-//	                                                method: 'post',
-//	                                                url:'/orderDetail/delete',
-//	                                                data: {orderId: id }
-//	                                        })
-//					        .then(data => {
-//	                                                        let mid = this.list.findIndex(item => item.id === id);
-//						                this.list.splice(mid,1);
-//                                                              alert('删除成功！');
-//					        })
-//                                }
-//                          }
+			remove(id) {
+                               if(!confirm("删除订单？")) return;
+                               else{
+				        this.$http({
+	                                                method: 'post',
+	                                                url:'/orderDetail/delete',
+	                                                data: {orderId: id }
+	                                        })
+					        .then(data => {
+	                                                        let mid = this.list.findIndex(item => item.id === id);
+						                this.list.splice(mid,1);
+                                                             alert('删除成功！');
+					        })
+                               }
+                         }
 		},
 		created() {
 			this.getList();
