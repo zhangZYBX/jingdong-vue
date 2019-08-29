@@ -18,7 +18,7 @@ Vue.use(Router);
 
 export default new Router({
 	linkActiveClass:'active',
-  routes: [
+	routes: [
 		{ path: '/',component: home},
 		{ path:'/category',component:category,meta:{ keepAlive:true}},
 		{ path:'/home',component:home},

@@ -53,7 +53,6 @@
 		data() {
 			return {
 				list:[],
-				a:{},
 			}
 		},
 		methods: {

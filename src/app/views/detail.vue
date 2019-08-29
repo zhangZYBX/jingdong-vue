@@ -114,7 +114,7 @@
 					banner:[],
 					name:'',
 					price:0,
-					count:0,
+					count:1,
 					mainImage:''
 				},
 				count: 0
@@ -122,6 +122,10 @@
 		},
 		computed:{
 			...mapState('product',['list'])
+		},
+		mounted() {
+		        console.log(this.$store.state.product.list);
+			console.log(this.list);
 		},
 		methods:{
 			...mapActions('detail',['getData','addInToMyCart']),
