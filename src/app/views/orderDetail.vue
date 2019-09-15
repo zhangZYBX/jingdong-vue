@@ -158,6 +158,7 @@
 		background-repeat: no-repeat;
 		background-size: 0.84rem 0.4rem;
 		flex-shrink: 0;
+		border: 1px solid black;
 	}
 	.content>ul>li>div.header>span.jingdong {
 		flex-grow: 1;
