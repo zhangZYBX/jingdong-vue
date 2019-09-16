@@ -134,7 +134,7 @@
  			},
 			 //取消选择地区
 			countermand() {
-								this.show = false
+								this.show = false;
 			},
 			//打开选择地区
 			choose() {
