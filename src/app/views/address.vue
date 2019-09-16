@@ -67,7 +67,7 @@
 	import { mapMutations } from 'vuex';
  	export default {
 		components:{
-			VDistpicker
+			VDistpicker,
 		},
 		data() {
 			return {
