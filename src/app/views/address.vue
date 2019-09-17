@@ -71,6 +71,7 @@
 		},
 		data() {
 			return {
+			  ///
 				//省市区
 				province: '北京市',
 				city: '',
