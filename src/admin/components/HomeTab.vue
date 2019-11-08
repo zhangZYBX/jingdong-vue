@@ -14,6 +14,7 @@
 		import TabPassword from './TabPassword.vue';
 		import TabCategory from './TabCategory.vue';
 		import TabProduct  from './TabProduct.vue';
+		import ECharts from './echarts.vue'
 		let { mapState,mapMutations } = createNamespacedHelpers('tab')
         export default {
 			data() {
@@ -22,7 +23,8 @@
 					tabMap: {
 						password: { label: '密码修改',component:TabPassword},
 						category: { label: '商品分类管理',component: TabCategory},
-						product:  { label: '商品信息管理', component: TabProduct}
+						product:  { label: '商品信息管理', component: TabProduct},
+						echarts:  { label: '使用eChars', component: ECharts}
 					}
 				}
 			},

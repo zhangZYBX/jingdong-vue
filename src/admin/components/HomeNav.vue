@@ -35,6 +35,10 @@
 					<i class="el-icon-edit-outline"></i>
 					<span>商品信息管理</span>
 				</el-menu-item>
+				<el-menu-item index="echarts">
+					<i class="el-icon-edit-outline"></i>
+					<span>Echarts</span>
+				</el-menu-item>
 			</el-submenu>
 		</el-menu>
 	</div>
