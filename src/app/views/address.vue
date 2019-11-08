@@ -67,10 +67,11 @@
 	import { mapMutations } from 'vuex';
  	export default {
 		components:{
-			VDistpicker
+			VDistpicker,
 		},
 		data() {
 			return {
+			  ///
 				//省市区
 				province: '北京市',
 				city: '',
@@ -134,7 +135,7 @@
  			},
 			 //取消选择地区
 			countermand() {
-								this.show = false
+								this.show = false;
 			},
 			//打开选择地区
 			choose() {
